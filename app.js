@@ -23,6 +23,7 @@ app.use(question);
 
 // Define routes
 app.get('/', (req, res) => {
+    res.setHeader("Access-Control-Allow-Credentials","true")
     res.send('hello')
 });
 
