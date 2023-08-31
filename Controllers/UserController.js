@@ -76,7 +76,7 @@ const loginController = async (req,res) => {
       }
 
       //create a token
-      const token = await JWT.sign({id : Users._id},process.env.JWT_SECRET,{expiresIn : '7d'});
+      const token = await JWT.sign({id : Users._id},process.env.JWTSECRET,{expiresIn : '7d'});
 
       //if find user and match password
       if(user && matchPassword){
