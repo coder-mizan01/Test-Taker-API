@@ -7,7 +7,7 @@ const requireSignin = (req,res,next) => {
   try {
     const decode = JWT.verify(
         req.headers.authorization,
-        process.env.JWT_SECRET
+        process.env.JWTSECRET
     )
     next()
   } catch (error) {
